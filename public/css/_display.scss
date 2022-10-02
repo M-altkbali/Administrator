@@ -1,0 +1,88 @@
+.table-title {
+    width: 100%;
+    height: fit-content;
+    // background-color: #11101d;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .add-user {
+        background-color: $color_primary;
+        padding: 1% 2%;
+        border-radius: 10px;
+        transition: 0.3s;
+        &:hover {
+            background-color: $color_second;
+            transition: 0.3s;
+        }
+    }
+    .search-input {
+        width: 15%;
+        height: 30px;
+        border-radius: 10px;
+        border: 1px solid #afafb8;
+        outline: none;
+        padding: 1.5% 1%;
+    }
+}
+.table-responsive {
+    width: 100%;
+    margin-top: 2%;
+    .table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+
+        thead {
+            background-color: #11101d;
+            color: #cdcdd5;
+
+            tr {
+                th {
+                    padding: 10px;
+                }
+            }
+        }
+        tbody {
+            tr {
+                td,
+                th {
+                    padding: 10px;
+                    border-bottom: 1px solid #1d1b31;
+                    .btn {
+                        font-size: 1.5rem;
+                        cursor: pointer;
+                        .bx-edit {
+                            color: $color_warning;
+                            &:hover {
+                                color: #dda34c;
+                                transform: scale(1.2);
+                            }
+                        }
+                        .bx-x-circle {
+                            color: $color_danger;
+                            &:hover {
+                                color: #dd5561;
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+                .action {
+                    @include flexAround(row);
+                    button {
+                        background-color: transparent;
+                    }
+                    .bx-show {
+                        color: $color_success;
+                        &:hover {
+                            color: #35c997;
+                            transform: scale(1.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

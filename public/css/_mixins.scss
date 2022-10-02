@@ -1,0 +1,33 @@
+@mixin flexCenter($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flexBetween($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin flexAround($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin flexStart($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+    align-items: flex-start;
+}
+@mixin flexEnd($direction) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+// call ----->  @include fleexCenter(row|colmn);

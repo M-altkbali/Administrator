@@ -1,0 +1,30 @@
+header {
+    height: 70px;
+    background-color: $dark-gray;
+    color: white;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    nav {
+        margin: 0 5%;
+        ul {
+            display: flex;
+            align-items: center;
+            flex-direction: row-reverse;
+            li {
+                display: flex;
+                align-items: center;
+                margin: 0 0.8rem;
+
+                i {
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+                span {
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+}

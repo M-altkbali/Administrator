@@ -1,0 +1,119 @@
+.date {
+    display: inline-block;
+    background-color: $color_light;
+    border-radius: 10px;
+    margin-top: 1rem;
+    padding: 0.5rem 1.6rem;
+    width: fit-content;
+
+    input[type="date"] {
+        background-color: transparent;
+        color: $color_dark;
+        
+    }
+}
+.insights {
+    @include flexBetween(row);
+    width: 90%;
+    & > div {
+        width: 30%;
+        background-color: $color_white;
+        padding: 1.5rem;
+        border-radius: 18px;
+        margin-top: 1rem;
+        box-shadow: $box_shadow;
+        transition: all 300ms ease;
+        &:hover {
+            box-shadow: none;
+        }
+
+        i {
+            background-color: $color_primary;
+            padding: 0.5rem;
+            border-radius: 50%;
+            color: $color_white;
+            font-size: 2rem;
+        }
+        i.bxs-capsule {
+            background-color: $color_danger;
+        }
+        i.bx-group {
+            background-color: $color_success;
+        }
+
+        .middle {
+            @include flexBetween(row);
+        }
+    }
+
+    h3 {
+        margin: 1rem 0 0.6rem;
+        font-size: 1rem;
+    }
+
+    .progress {
+        position: relative;
+        width: 92px;
+        height: 92px;
+        border-radius: 50%;
+
+        svg {
+            width: 7rem;
+            height: 7rem;
+
+            circle {
+                fill: none;
+                stroke: $color_primary;
+                stroke-width: 14;
+                stroke-linecap: round;
+                transform: translate(5px, 5px);
+                stroke-dasharray: 225.82925415039062; // in console $0.getTotalLength() to get this number
+                // stroke-dashoffset: 20;
+            }
+        }
+        .number{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            @include flexCenter(row);
+        }
+    }
+
+    .users {
+        .progress {
+            svg {
+                circle {
+                    // stroke-dasharray: 110;
+                    stroke-dashoffset: 65;
+                }
+            }
+        }
+    }
+    .pharmacies {
+        .progress {
+            svg {
+                circle {
+                    // stroke-dasharray: 200;
+                    stroke-dashoffset: 100;
+                }
+            }
+        }
+    }
+    .customers {
+        .progress {
+            svg {
+                circle {
+                    // stroke-dasharray: 250;
+                    stroke-dashoffset: 40;
+                }
+            }
+        }
+    }
+
+    small{
+        margin-top: 1.3rem;
+        display: block;
+    }
+}

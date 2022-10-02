@@ -1,0 +1,10 @@
+.sec {
+    width: 100%;
+    padding: 0 5%;
+    @include flexCenter(column);
+
+    .container {
+        width: 100%;
+        @include flexCenter(column);
+    }
+}

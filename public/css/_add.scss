@@ -1,0 +1,84 @@
+.form-create {
+    width: 80%;
+    @include flexBetween(row);
+    flex-wrap: wrap;
+    div {
+        @include flexStart(column);
+        margin: 1.5rem 0;
+        width: 30%;
+        label {
+            margin-bottom: 10px;
+        }
+        input,
+        select {
+            border: 1px solid $color_dark_variant;
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.8rem;
+            border-radius: 10px;
+            box-shadow: $box_shadow;
+        }
+    }
+    .fileInput {
+        width: 30%;
+        input[type="file"] {
+            background-color: $dark-gray;
+            position: relative;
+            height: 8rem;
+            border: 0px;
+            box-shadow: $box_shadow;
+            transition: all 0.3s;
+            border-radius: 5px 10px 10px 100px;
+            &::after {
+                content: "Select File";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background-color: $color_info_dark;
+                text-align: center;
+                line-height: 140px;
+                font-size: 1.1rem;
+                color: $color_white;
+                cursor: pointer;
+                transition: all 0.3s;
+            }
+            &:hover::after {
+                background-color: $color_warning;
+                color: $color_white;
+                transition: all 0.3s;
+            }
+        }
+    }
+    .email {
+        width: 65%;
+        input[type="email"] {
+        }
+    }
+    .save_button {
+        width: 100%;
+        margin-top: -8px;
+        div {
+            margin: 0 18%;
+            @include flexBetween(row);
+            button {
+                padding: 1rem 2.2rem;
+                background-color: $color_primary;
+                font-size: 1.1rem;
+                border-radius: 10px;
+                color: $color_white;
+
+                box-shadow: $box_shadow;
+                transition: 0.3s;
+                &:hover {
+                    background-color: $color_second;
+                    transition: 0.3s;
+                }
+            }
+            button[type="reset"] {
+                background-color: $color_dark_variant;
+            }
+        }
+    }
+}
