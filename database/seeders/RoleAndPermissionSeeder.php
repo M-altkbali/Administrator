@@ -43,24 +43,5 @@ class RoleAndPermissionSeeder extends Seeder
             'edit-pharmacy',
             'delete-pharmacy',
         ]);
-
-
-
-
-
-        $user = User::first();
-
-        $user->assignRole('Admin');
-
-
-
-        $role = Role::findByName('Admin');
-
-        $role->givePermissionTo('edit-users');
-
-
-        $user = User::first();
-
-        $user->givePermissionTo('edit-users');
     }
 }
