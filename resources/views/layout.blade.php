@@ -49,11 +49,13 @@
                 @endrole
             </li>
             <li>
+                @role('admin')
                 <a href="/pharmacies">
                     <i class='bx bx-store'></i>
                     <span class="links_name">Pharmacies</span>
                 </a>
                 <span class="tooltip">Pharmacies</span>
+                @endrole
             </li>
             <li>
                 <a href="/departments">
