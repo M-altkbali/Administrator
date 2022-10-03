@@ -15,7 +15,7 @@
 
     @extends('layout')
 
-    @section('Title') Users  @endsection
+    @section('Title') Dashboard  @endsection
 
     @section('page')
         
