@@ -50,11 +50,11 @@
             </li>
             <li>
                 @role('admin')
-                <a href="/pharmacies">
-                    <i class='bx bx-store'></i>
-                    <span class="links_name">Pharmacies</span>
-                </a>
-                <span class="tooltip">Pharmacies</span>
+                    <a href="/pharmacies">
+                        <i class='bx bx-store'></i>
+                        <span class="links_name">Pharmacies</span>
+                    </a>
+                    <span class="tooltip">Pharmacies</span>
                 @endrole
             </li>
             <li>
@@ -106,15 +106,15 @@
         </ul>
     </div>
     <section class="home-section">
-        {{-- <header>
+        <header>
             <nav>
                 <ul>
-                    <li><span> Administrator </span> &nbsp; <i class='bx bxs-user-circle'></i></li>
+                    <li><span> @include('layouts.navigation') </span> &nbsp; <i class='bx bxs-user-circle'></i></li>
                     <li></li>
                     <li><i class='bx bx-bell'></i></li>
                 </ul>
             </nav>
-        </header> --}}
+        </header>
         <div class="text">
             <h1> @yield('Title') </h1>
         </div>
