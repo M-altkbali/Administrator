@@ -27,7 +27,7 @@
                 <span class="tooltip">Search</span>
             </li>
             <li>
-                <a href="#">
+                <a href="{{ route('dashboard') }}">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
@@ -50,7 +50,7 @@
             </li>
             <li>
                 @role('admin')
-                    <a href="/pharmacies">
+                    <a href="{{ route('pharmacies.index') }}">
                         <i class='bx bx-store'></i>
                         <span class="links_name">Pharmacies</span>
                     </a>
@@ -58,21 +58,21 @@
                 @endrole
             </li>
             <li>
-                <a href="/departments">
+                <a href="{{ route('departments.index') }}">
                     <i class='bx bx-pie-chart-alt-2'></i>
                     <span class="links_name">Departments</span>
                 </a>
                 <span class="tooltip">Departments</span>
             </li>
             <li>
-                <a href="/customers">
+                <a href="{{ route('customers.index') }}">
                     <i class='bx bx-group'></i>
                     <span class="links_name">Customers</span>
                 </a>
                 <span class="tooltip">Customers</span>
             </li>
             <li>
-                <a href="/brands">
+                <a href="{{ route('brands.index') }}">
                     <i class='bx bxs-category-alt'></i>
                     <span class="links_name">Brands</span>
                 </a>
@@ -109,7 +109,8 @@
         <header>
             <nav>
                 <ul>
-                    <li><span> @include('layouts.navigation') </span> &nbsp; <i class='bx bxs-user-circle'></i></li>
+                    <li><span> @include('layouts.navigation') </span> &nbsp;
+                        {{-- <i class='bx bxs-user-circle'></i></li> --}}
                     <li></li>
                     <li><i class='bx bx-bell'></i></li>
                 </ul>

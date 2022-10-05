@@ -1,7 +1,9 @@
 .show {
     width: 100%;
     @include flexCenter(row);
-    .info {
+    flex-wrap: wrap;
+    .info,
+    .info_ {
         width: 60%;
         div {
             @include flexBetween(row);
@@ -21,8 +23,18 @@
             }
         }
     }
+    .info_ {
+        width: 100%;
+    }
     .pic {
-        width: 40%;
+        width: 30rem;
+     
         // background-color: cadetblue;
+        .img {
+         
+            img {
+                border-radius: 30px 120px 10px 200px;
+            }
+        }
     }
 }
