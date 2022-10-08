@@ -28,7 +28,7 @@
             border: 0px;
             box-shadow: $box_shadow;
             transition: all 0.3s;
-            border-radius: 5px 10px 10px 100px;
+            // border-radius: 5px 10px 10px 100px;
             &::after {
                 content: "Select File";
                 position: absolute;
@@ -60,7 +60,8 @@
         width: 100%;
         margin-top: -8px;
         div {
-            margin: 0 18%;
+            // margin: 0 18%;
+            margin: auto;
             @include flexBetween(row);
             button {
                 padding: 1rem 2.2rem;

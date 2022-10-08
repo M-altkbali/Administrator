@@ -41,7 +41,7 @@
                 </thead>
                 <tbody>
                     @if (count($pharmacies) > 0)
-            
+
                         @foreach ($pharmacies as $pharmacy)
                             <tr>
                                 <th scope="row">{{ $pharmacy->id }}</th>
@@ -53,28 +53,32 @@
                                 {{-- <td>{{ $pharmacy->domain }}</td> --}}
                                 {{-- <td>{{ $pharmacy->city }}</td> --}}
                                 {{-- <td>{{ $pharmacy->notes }}</td> --}}
-                                <td><img src="{{ url("images/pharmacies/$pharmacy->logo") }}" width="20px" height="20px">
+                                <td>
+                                    <div>
+                                        <img src="{{ url("images/pharmacies/$pharmacy->logo") }}"
+                                            width="20px"height="20px">
+                                    </div>
                                 </td>
                                 {{-- <td>{{ $pharmacy->location_lattude }}</td> --}}
                                 {{-- <td>{{ $pharmacy->location_longtude }}</td> --}}
 
 
-
-
                                 <td class="action">
-                                    <a href="{{ route('pharmacies.show', $pharmacy->id) }}" class="btn">
-                                        <i class='bx bx-show'></i>
-                                    </a>
-                                    <a href="{{ route('pharmacies.edit', $pharmacy->id) }}" class="btn">
-                                        <i class='bx bx-edit'></i>
-                                    </a>
+                                    <div>
+                                        <a href="{{ route('pharmacies.show', $pharmacy->id) }}" class="btn">
+                                            <i class='bx bx-show'></i>
+                                        </a>
+                                        <a href="{{ route('pharmacies.edit', $pharmacy->id) }}" class="btn">
+                                            <i class='bx bx-edit'></i>
+                                        </a>
 
-                                    <form action="{{ route('pharmacies.destroy', $pharmacy->id) }}" class="formBtn"
-                                        method="post">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="btn" type="submit"><i class='bx bx-x-circle'></i></button>
-                                    </form>
+                                        <form action="{{ route('pharmacies.destroy', $pharmacy->id) }}" class="formBtn"
+                                            method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn" type="submit"><i class='bx bx-x-circle'></i></button>
+                                        </form>
+                                    </div>
                                 </td>
                             </tr>
                         @endforeach
@@ -84,9 +88,6 @@
                 </tbody>
             </table>
         </div>
-
-
-
 
     @endsection
 

@@ -33,7 +33,7 @@
                         class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
                 @else
                     <div>
-                        <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Login</a>
+                        <a href="{{ route('login') }}" class="text-sm text-gray-400 dark:text-gray-400 underline ">Login</a>
                     </div>
                 @endauth
             </div>

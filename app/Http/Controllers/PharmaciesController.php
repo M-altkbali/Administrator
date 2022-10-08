@@ -67,8 +67,6 @@ class PharmaciesController extends Controller
     }
 
 
-
-
     public function show($id)
     {
 
@@ -87,17 +85,13 @@ class PharmaciesController extends Controller
     public function update(Request $request, $id)
     {
 
-
-
-        // $request->validate([
-        //     'pharma_name' => 'required',
-        //     'Manager_name' => 'required',
-        //     'phone' => 'required',
-        //     'pharma_email' => 'required',
-        //     'password' => 'required',
-        // ]);
-
-
+        $request->validate([
+            'pharma_name' => 'required',
+            'Manager_name' => 'required',
+            'phone' => 'required',
+            'pharma_email' => 'required',
+            'password' => 'required',
+        ]);
 
         $to_update = Pharmacie::findorFail($id);
         $to_update->pharmacy_name = strip_tags($request->input('pharma_name'));
@@ -123,26 +117,6 @@ class PharmaciesController extends Controller
         } else {
             unset($input['image']);
         }
-
-
-        //     $destinationPath = 'images/';
-        //     $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-        //     $image->move($destinationPath, $profileImage);
-        //     $input['image'] = "$profileImage";
-
-
-        // $id->update($input);
-
-        // return redirect()->route('products.index')
-        //     ->with('success', 'Product updated successfully');
-
-        // $published = 0;
-        // if ($request->has('is_published')) {
-        //     $published = 1;
-        // }
-        // $id->update($request->validate() + ['is_published' => $published]);
-
-
 
         $to_update->save();
         return redirect()->route('pharmacies.index');

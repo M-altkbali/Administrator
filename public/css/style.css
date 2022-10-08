@@ -100,6 +100,107 @@ input[type=file] {
 }
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+.bg-white {
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+}
+
+.bg-gray-100 {
+  --bg-opacity: 1;
+  background-color: #f7fafc;
+  background-color: rgba(247, 250, 252, var(--bg-opacity));
+}
+
+.border-gray-200 {
+  --border-opacity: 1;
+  border-color: #edf2f7;
+  border-color: rgba(237, 242, 247, var(--border-opacity));
+}
+
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shadow {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gray-200 {
+  --text-opacity: 1;
+  color: #edf2f7;
+  color: rgba(237, 242, 247, var(--text-opacity));
+}
+
+.text-gray-300 {
+  --text-opacity: 1;
+  color: #e2e8f0;
+  color: rgba(226, 232, 240, var(--text-opacity));
+}
+
+.text-gray-400 {
+  --text-opacity: 1;
+  color: #cbd5e0;
+  color: rgba(203, 213, 224, var(--text-opacity));
+}
+
+.text-gray-500 {
+  --text-opacity: 1;
+  color: #a0aec0;
+  color: rgba(160, 174, 192, var(--text-opacity));
+}
+
+.text-gray-600 {
+  --text-opacity: 1;
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
+}
+
+.text-gray-700 {
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.text-gray-900 {
+  --text-opacity: 1;
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
+}
+
+.w-5 {
+  width: 1.25rem;
+}
+
+.w-8 {
+  width: 2rem;
+}
+
+.w-auto {
+  width: auto;
+}
+
+.w-full {
+  width: 100% !important;
+}
+
 .sec {
   width: 100%;
   padding: 0 5%;
@@ -347,42 +448,57 @@ header nav ul li span {
   width: -moz-fit-content;
   width: fit-content;
 }
-.table-responsive .table tbody tr td img,
-.table-responsive .table tbody tr th img {
+.table-responsive .table tbody tr td div,
+.table-responsive .table tbody tr th div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.table-responsive .table tbody tr td div img,
+.table-responsive .table tbody tr th div img {
   width: 100px;
 }
 .table-responsive .table tbody tr .action {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
   height: 160px;
+  width: 100%;
 }
-.table-responsive .table tbody tr .action .btn {
+.table-responsive .table tbody tr .action div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 50%;
+}
+.table-responsive .table tbody tr .action div .btn {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.table-responsive .table tbody tr .action .btn .bx-edit {
+.table-responsive .table tbody tr .action div .btn .bx-edit {
   color: #ffbb55;
 }
-.table-responsive .table tbody tr .action .btn .bx-edit:hover {
+.table-responsive .table tbody tr .action div .btn .bx-edit:hover {
   color: #dda34c;
   transform: scale(1.2);
 }
-.table-responsive .table tbody tr .action .btn .bx-x-circle {
+.table-responsive .table tbody tr .action div .btn .bx-x-circle {
   color: #ff7782;
 }
-.table-responsive .table tbody tr .action .btn .bx-x-circle:hover {
+.table-responsive .table tbody tr .action div .btn .bx-x-circle:hover {
   color: #dd5561;
   transform: scale(1.2);
 }
-.table-responsive .table tbody tr .action button {
+.table-responsive .table tbody tr .action div button {
   background-color: transparent;
 }
-.table-responsive .table tbody tr .action .bx-show {
+.table-responsive .table tbody tr .action div .bx-show {
   color: #41f1b6;
 }
-.table-responsive .table tbody tr .action .bx-show:hover {
+.table-responsive .table tbody tr .action div .bx-show:hover {
   color: #35c997;
   transform: scale(1.2);
 }
@@ -425,7 +541,6 @@ header nav ul li span {
   border: 0px;
   box-shadow: 0 2rem 3rem rgba(132, 139, 200, 0.18);
   transition: all 0.3s;
-  border-radius: 5px 10px 10px 100px;
 }
 .form-create .fileInput input[type=file]::after {
   content: "Select File";
@@ -455,7 +570,7 @@ header nav ul li span {
   margin-top: -8px;
 }
 .form-create .save_button div {
-  margin: 0 18%;
+  margin: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

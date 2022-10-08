@@ -50,6 +50,13 @@ return [
             'visibility' => 'public',
             'throw' => false,
         ],
+        'brands' => [
+            'driver' => 'local',
+            'root' => base_path() . 'public/images/brands/',
+            'url' => env('APP_URL') . '/public',
+            'visibility' => 'public',
+            'throw' => false,
+        ],
 
         's3' => [
             'driver' => 's3',
